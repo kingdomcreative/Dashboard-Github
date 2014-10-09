@@ -1,0 +1,617 @@
+/*
+	Theme Name: CP Dashboard
+	Theme URI: http://dashboard.circuitpro.co.uk
+	Description: Dashboard for Circuit Pro Admin
+	Version: 2.0.0
+	Author: Lewis Healey
+	Tags: Blank, HTML5, CSS3
+	
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+
+/*------------------------------------*\
+    1. GLOBAL
+    2. TOP MENU OVERRIDES
+    3. IMAGE HEADER OPTIONS
+    4. NEWS & DASHBOARD
+    5. TABS
+    6. LIST PROJECTS
+    7. LIST CLIENTS
+    8. ADD PROJECT 
+
+
+\*------------------------------------*/
+
+@font-face {
+    font-family: 'futura_stdbook';
+    src: url('font/futurastd-book-webfont.eot');
+    src: url('font/futurastd-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/futurastd-book-webfont.woff') format('woff'),
+         url('font/futurastd-book-webfont.ttf') format('truetype'),
+         url('font/futurastd-book-webfont.svg#futura_stdbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*------------------------------------*\
+    1. GLOBAL
+\*------------------------------------*/
+
+@primary: 		#fb5a5a ;
+@secondary: 	#70e8cb ;
+@tertiary: 	    #fac564 ;
+@white: 		#f6f6f6 ;
+@grey: 			#565656 ;  
+@dark: 			#282828 ;
+@section-padding: 50px 0;
+
+@twitter: 		#00aced ;
+@facebook: 		#3b5998 ;
+@linkedin: 		#007bb6 ;
+  
+.primary              { background: @primary; }
+.secondary            { background: @secondary; }
+.tertiary             { background: @tertiary; }
+.white                { background: @white; }
+.grey                 { background: @grey; }
+.dark                 { background: @dark; }
+.twitter              { background: @twitter; }
+.facebook             { background: @facebook; }
+.linkedin             { background: @linkedin; }
+
+.primary-text         { color: @primary; }
+.secondary-text       { color: @secondary; }
+.tertiary-text        { color: @tertiary; }
+.white-text           { color: @white; }
+.grey-text            { color: @grey; }
+.dark-text            { color: @dark; }
+.twitter-text         { color: @twitter; }
+.facebook-text        { color: @facebook; }
+.linkedin-text        { color: @linkedin; }
+
+
+@light: #F6F6F6; 
+@red: #e84300; 
+@lightorange: #f4efe2;
+@orange: #70e8cb;
+@blue: #006DCC;
+@gray: #3E454C;
+@green: #5bb75b;
+@lightgreen: #BFBC88;
+@greygreen: #aba981;
+@teal: #40736E;
+@brown: #A69076; 
+
+.transition, .area-news,  .download-links-input, .btn, .link-generator-input, .share-links-input, .login-input, .link-input, .list-changes {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease; }
+
+.clearboth {
+	clear: both;
+	padding: 0;
+	margin: 0; }
+
+.first { 
+	margin: 0 !important; }
+
+img { max-width: 100%;}
+
+body { background: darken(@gray, 10%); margin-top: 40px;}
+
+body,
+html {
+ height: 100%;
+  background: @white url("http://kingdom-creative.co.uk/wp-content/uploads/2014/02/geometry.png") repeat;
+  color: @white;
+  border-top: 2px solid @primary;
+}
+
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif; text-transform: uppercase;}
+
+iframe { border: 0 !important; margin: 0 !important; }
+
+.no-pad { padding: 0;}
+
+.stats { padding-left: 20px;}
+.stats a { color: #777;}
+
+
+/*------------------------------------*\
+    2. TOP MENU OVERRIDES
+\*------------------------------------*/
+
+.menu-header { background: @secondary; 
+	height: @hd-height; width: 100%;  z-index: 2;}
+
+
+/*------------------------------------*\
+    3. IMAGE HEADER OPTIONS (menu-header)
+\*------------------------------------*/
+
+@hd-height: 92px;
+
+.header-full { background: url(../img/header-opt.jpg); height: @hd-height;}
+.header-option { position: relative;  height: @hd-height;}
+
+
+.menu-header h1 { margin: 25px 0; text-transform: uppercase;}
+
+// Staff Image
+.staff { text-align: right; }
+
+.highlight { margin-top: 20px;}
+ 
+/*------------------------------------*\
+    4. NEWS & DASHBOARD
+\*------------------------------------*/
+
+.fold-full { background: darken(@gray, 5%); margin-bottom: 20px; }
+.fold-single-full { background: darken(@gray, 5%); padding-bottom: 20px; padding-top: 20px;}
+.fold-dash { padding: 20px 0; position: relative;}
+
+/* Box background */
+.news-item { background: @gray;}
+
+.news-alerts { margin: 0 0 20px 0!important; overflow-y: scroll; height: 268px; width: 738px; border-bottom: 1px solid #444; }
+.news-alerts li { list-style: none !important; font-size: 12px; padding-top: 10px; padding-left: 1px; padding-bottom: 10px; border-bottom: 1px solid #444;}
+.news-alerts li:first-child { margin-top: 0px; }
+.news-alerts li:hover { background: lighten(@gray, 1%);}
+
+.ico-news { text-align: center; padding-top: 5px; position: relative;}
+
+.tab-open-close {  position: absolute; right: 0; 
+	top: 112px; z-index: 3; cursor: pointer; }
+
+.tab-open-close [class^="icon-"], .tab-open-close [class*=" icon-"] {
+  padding: 12px 15px;
+  display: inline-block;	
+}
+
+.active-ico { color: @gray;}
+
+.name-news { background-color: #333 !important; border: 1px solid #444 !important; font-size: 12px; 
+	color: #70e8cb !important; margin-bottom: 15px !important; margin-right: 5px; height: 28px !important;}
+
+.area-news { width: 582px; background-color: transparent !important; border: 1px solid lighten(@gray, 10%); color: #fff; 
+	font-size: 12px !important; display: inline-block; height: 51px; margin-bottom: 0px;}
+
+// Vimeo Box
+.vimeo-link { width: 260px; margin-bottom: 0px !important; border: 1px solid #444;}
+
+.latest-news { min-height: 352px;}
+
+.latest-upload, .latest-news { margin: 15px;}
+.link-generator { margin: 15px 15px 5px 15px;}
+
+.link-generator-input { width: 268px; background-color: transparent !important; border: 1px solid lighten(@gray, 10%); color: #fff; 
+  font-size: 12px !important; margin-bottom: 10px !important;}
+
+.latest-upload p { color: #999; margin-top: 10px;}
+
+.quote-tri { border-left: 1px solid #444; margin-left: 5px !important; padding-left: 10px; padding-right: 20px;}
+
+.tri-sl { position: absolute; top: 16px; right: -10px;
+  width: 0; 
+  height: 0; 
+  border-top: 5px dashed transparent;
+  border-bottom: 5px dashed transparent; 
+  
+  border-right:7px dashed #444; }
+
+  .news-sub { padding: 21px 22px; display: inline-block;}
+
+/*------------------------------------*\
+    5. TABS
+\*------------------------------------*/
+
+.tab-full { background: url(../img/squairy_light.png) repeat; padding: 20px 0; }
+.tab-bg { background: #f6f6f6;}
+
+.tab-edit { background: @gray; padding: 20px 0 0; position: relative;}
+.tab-add-film { background: @gray; padding: 20px 0 0; position: relative;}
+
+// Side Icon
+.side-opt { height: 100%; min-height: 100% !important;}
+
+.side-opt ul { margin: 0 !important; background: darken(@gray, 5%); min-height: 100%; height: 100%;}
+.side-opt li a{ padding: 20px 10px; text-align: center; font-size: 24px; list-style: none !important;}
+.side-opt li a:hover { color: darken(@orange, 20%); }
+
+.side-opt .add { background: darken(@gray, 10%); }
+.side-opt .active { background: #f6f6f6; color: #70e8cb; }
+.side-opt .end-fill { background: @gray; height: 100%; min-height: 570px !important; }
+
+// Hover 70e8cb
+.side-opt .add:hover, .side-opt .view:hover, .side-opt .completed:hover{ 
+	background: #70e8cb; color: #fff; cursor: pointer; }
+
+.side-opt-light ul { background: @gray;}
+
+// Ovveride Tab Weight
+.nav-tabs h4 { margin: 0; font-weight: 200;}
+
+.sub-title { float: left; width: 70%;}
+.action-filter { float: right; width: 30%; text-align: right;}
+
+
+/*------------------------------------*\
+    6. LIST PROJECTS
+\*------------------------------------*/
+
+.project { width: 1060px !important; color: #575757; padding: 20px 20px 0 20px;}
+.project h2 { margin: 0 0 25px 0 !important; line-height: 40px;}
+
+// Ul
+.list-projects {  margin: 0 !important; overflow-y: scroll; height: 660px; border: 1px solid #DDDDDD;}
+
+.list-projects li{ background: #fff; max-height: 65px; height: 65px; color: #575757;  list-style: none !important; 
+	margin: 0 0 0 0 !important; vertical-align: top; }
+
+.list-projects li:hover { background: #fcfcfc;}
+ 
+.project-name { width: 100%; max-width: 643px;}
+.project-info { width: 100%; max-width: 75px; text-align: center; color: @orange;}
+.date-added   { width: 100%; max-width: 90px; text-align: center;}
+.client   { width: 100%; max-width: 200px;}
+
+.film-name { width: 100%; max-width: 997px;}
+
+.project-name, .date-added, .project-info, .client, .film-name { float: left; display: inline-block; border-bottom: 1px solid #eee; 
+	 padding: 10px 20px; height: 43px; line-height: 43px; }
+
+   .film-name { border-bottom: 1px solid lighten(@gray, 20%);  }
+    .film-name{ border-bottom: 1px solid lighten(@gray, 20%) !important; border-right: 1px solid lighten(@gray, 20%) !important; }
+    .film-name, .table-top-dark { color: lighten(@gray, 80%); }
+    .dark { color: #f8f8f8; border-right: 1px solid transparent !important; border-bottom: 1px solid lighten(@gray, 20%) !important; }
+.table-top-dark {border-right: 1px solid transparent !important; border-bottom: 1px solid lighten(@gray, 20%) !important; }
+
+.project-name, .date-added, .client, .film-name  {
+	border-right: 1px solid #eee; }
+
+
+.table-top {
+	background-color: lighten(@gray, 65%); color: #575757;
+}
+
+.table-top-dark {   background-color: darken(@gray, 8%); border-right: 1px solid #eee; }
+
+
+
+/*------------------------------------*\
+    7. LIST CLIENTS
+\*------------------------------------*/
+
+.list-client { margin: 0px !important;  height: 659px; overflow-y: scroll;}
+
+.list-client li {
+	background: #fff; float: left; display: inline-block; color: #575757;  list-style: none !important; 
+	margin: 0 17px 17px 0; height: 130px; width: 150px; text-align: center; border: 1px solid #eee; padding: 0 20px;}
+
+.list-client li:hover { opacity: 0.6; cursor: pointer;}
+
+.list-client li img { padding: 15px 0;}
+
+.list-client .placeholder-client { padding: 40px 0; text-transform: uppercase; font-size: 20px; 
+	line-height: 24px; display: inline-block; font-family: 'Lato'}
+
+  #client-sort { }
+
+/*------------------------------------*\
+    8. ADD PROJECT
+\*------------------------------------*/
+
+.add-form { border: 1px solid #ccc; background-color: #fff !important; height: 20px !important;}
+.add-area { border: 1px solid #ccc; background-color: #fff !important; width: 100%; max-width: 480px; height: 150px;}
+
+
+/*------------------------------------*\
+    9. IMAGE HEADER OPTIONS
+\*------------------------------------*/
+
+#suggestions { position: absolute; z-index: 9999; color: #575757; background: #fff; width: 235px; font-size: 12px;}
+#suggestions ul { margin: 0; width: 100%;}
+#suggestions li { list-style: none; border-bottom: 1px solid #eee; padding: 10px;}
+#suggestions li a{ margin-top: 10px; }
+#suggestions p { margin: 0;}
+
+.search-proj a{ color: #444;}
+.search-film { }
+.category { color: #ccc; border-top: 1px solid #eee; }
+
+/*------------------------------------*\
+    10. BOOTSTRAP OVERRIDES
+\*------------------------------------*/
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  color: lighten(@orange, 10%);
+}
+
+.pagination {
+  margin: 0 !important;
+}
+
+.dropdown-toggle .icon-angle-down { padding-left: 10px;}
+.dropdown-toggle { padding: 3px 13px; color: #575757; border: 1px solid #575757;}
+
+/*------------------------------------*\
+    11. ACTIVE PROJECT PAGE
+\*------------------------------------*/
+
+.single-ap-page {
+height: 825px !important;
+}
+
+/*------------------------------------*\
+    12. SINGLE PROJECT PAGE
+\*------------------------------------*/
+
+.cal-date .icon-calendar { font-size: 24px; text-align: center; }
+
+.cal-date { text-align: center; padding: 37px 0; color: #575757; background: @light; margin-bottom: 20px; }
+.cal-date h4{ margin: 0;}
+
+.light { background: @light;}
+
+.single-list-projects {  margin: 0 !important; height: 325px; width: 1170px;}
+
+.single-list-projects li{ background-color: @gray;  max-height: 65px; height: 65px; color: #575757;  list-style: none !important; 
+	margin: 0 0 0 0 !important; vertical-align: top; }
+
+.single-list-projects li:hover { background: lighten(@gray, 2%);}
+
+.single-project { width: 760px !important; color: #575757; padding: 20px 20px 0 20px;}
+.single-project h2 { margin: 0 0 25px 0 !important; line-height: 21px;}
+
+.subpage-header { background: url(http://www.circuitpro.co.uk/wp-content/themes/html5blank-master/img/menu-repeat.png) repeat-x; 
+	height: @hd-height; width: 100%; z-index: 2;}
+
+.subpage-header h1 { margin: 25px 0; text-transform: uppercase;}
+
+/*------------------------------------*\
+    13. SINGLE FILM PAGE
+\*------------------------------------*/
+
+.email-dl { color: @orange;}
+
+.edit { text-align: right;}
+.edit .btn { margin-left: 5px; }
+
+.pager .icon-angle-left { padding-right: 10px;}
+.pager .icon-angle-right { padding-left: 10px;}
+
+.download-files { margin-top: 15px; border-bottom: 1px #444 solid;}
+.download-files .btn { margin-right: 60px; margin-bottom: 15px;}
+
+.related-films { color: #575757;}
+
+/* Box background */
+.video-item { background: @gray;}
+.video-item iframe { padding: 20px;}
+
+.download-links-input { width: 186px; background-color: #333 !important; border: 1px solid lighten(@gray, 10%); color: #fff; 
+	font-size: 12px !important; margin-bottom: 10px !important;}
+
+.share-links-input { width: 266px; background-color: transparent !important; border: 1px solid lighten(@gray, 10%); color: #fff; 
+  font-size: 12px !important; margin-bottom: 10px !important; height: 27px !important;}
+
+.download-links { margin: 15px; } 
+.download-links input { color: #fff;}
+.download-links .btn-warning { min-width: 36px; padding: 8px 20px !important;}
+.download-links .btn { padding: 7px 20px;}
+
+.share-link { margin: 15px 15px 5px 15px; } 
+
+
+/*------------------------------------*\
+    13. Edit Project
+\*------------------------------------*/
+
+.tab-edit input{ border: none;} 
+.tab-edit textarea{ border: none; color: #575757;}
+.tab-edit .sub-title { display: inline-block; width: 80px;}
+.tab-edit hr {  border-bottom: 1px solid lighten(@teal, 5%) !important;}
+
+.proj-title { background: @gray !important; color: @green !important; font-size: 31px !important; padding: 0 !important; height: 40px !important;  
+  margin: 10px 0 !important; font-family: 'Lato',sans-serif; font-weight: 200 !important; display: inline-block; width: 600px !important;}
+
+.proj-info {  background: lighten(@gray, 5%); margin-bottom: 30px; }
+.proj-info p { padding: 20px 0 0 20px;}
+.proj-info textarea { margin: 0 20px 20px 20px;}
+.proj-info input { margin: 0 20px 20px 20px;}
+.proj-info select { margin: 0 20px 20px 20px; color: #575757; border: none !important; height: 28px !important;}
+
+.proj-form-sub { color: #fff !important;}
+
+.proj-save { margin: 20px 0;}
+
+/*------------------------------------*\
+    14. Add Film
+\*------------------------------------*/
+
+.tab-add-film input[type="text"]{ border: none; color: #000; background-color: #fff}
+.tab-add-film .icon-upload-alt { padding-left: 10px; padding-right: 20px; color: #fff; font-size: 20px;}
+
+.add-film-title { background-color: @gray !important; color: @green !important; font-size: 31px !important; padding: 0 !important; height: 40px !important;  
+  margin: 10px 0 20px 0 !important; font-family: 'Lato',sans-serif; font-weight: 200 !important; display: inline-block; width: 600px !important;}
+
+.film-info {  background: lighten(@gray, 5%); margin-bottom: 30px; }
+.film-info input { margin: 20px 0 20px 20px;}
+.film-info p { padding: 20px 0 0 20px;}
+
+.film-info input[type="file"] { max-width: 230px;}
+
+.save-film { padding: 0 20px 20px 0;}
+.save-film .btn { margin-right: 5px;}
+
+.filmAddFormDone { position: absolute; background: rgba(0,0,0,0.8); width: 100%; padding: 111px 0; text-align: center; top: 0;}
+
+.projectAddFormDone { position: absolute; background: rgba(0,0,0,0.8); width: 100%; padding: 335px 0; text-align: center; top: 0; z-index: 9999;}
+.projectEditFormDone { position: absolute; background: rgba(0,0,0,0.8); width: 100%; padding: 335px 0; text-align: center; top: 0; z-index: 9999; height: 100%;}
+
+.icon-bell { padding-right: 10px; }
+
+/*------------------------------------*\
+    13. Add Project
+\*------------------------------------*/
+
+.add-proj-title { background: @light !important; color: #575757 !important; font-size: 31px !important; padding: 0 !important; height: 40px !important;  
+  margin: 0 0 10px 0 !important; font-family: 'Lato',sans-serif; font-weight: 200 !important; display: inline-block; width: 100% !important; border: none !important;}
+
+.clients select { color: #575757;}
+.date input { width: 100%;}
+
+.add-title-sub { display: inline-block; width: 80px;}
+
+/*------------------------------------*\
+    13. Client
+\*------------------------------------*/
+
+.client-details { padding: 20px;}
+
+/*------------------------------------*\
+    13. Log in page
+\*------------------------------------*/
+
+.login { margin-top: 14%; }
+
+#login-form { padding: 30px; position: relative;}
+
+#login-form input[type="text"], #login-form input[type="password"] { height: 42px;}
+#login-form h3 { margin: 0 0 10px 0; line-height: 25px;}
+
+.checkbox { margin: 0 0 8px 0; color: #999; font-size: 12px;}
+
+.login-input { width: 290px; background-color: #333 !important; border: 1px solid #444; color: #fff; 
+  font-size: 12px !important; margin-bottom: 10px !important;}
+
+#last-staff { position: absolute; bottom: 0; right: 0;}
+
+.last-login { color: #666; font-size: 12px;}
+
+
+/*------------------------------------*\
+    13. Edit Film
+\*------------------------------------*/
+
+.edit-film input[type="text"], .edit-film input[type="file"] { margin-left: 20px;}
+
+.edit-film .sub-title { display: inline-block; width: 80px; margin: 0 0 10px 0; }
+
+.edit-film-info {  background: lighten(@gray, 5%); margin-bottom: 30px; }
+.edit-film-info p { margin: 0 0 20px;}
+
+.tab-edit input[type="text"]{ border: none; color: #000; background-color: #fff; color: #575757;}
+
+.edit-film-title { background: transparent !important; color: #fff !important; font-size: 31px !important; padding: 0 !important; height: 40px !important;  
+  margin: 0 0 10px 0 !important; font-family: 'Lato',sans-serif; font-weight: 200 !important; display: inline-block; width: 600px !important; border: 1px solid transparent !important;}
+
+.unedit { opacity: 0.6;}
+/*------------------------------------*\
+    13. Search Query
+\*------------------------------------*/
+
+.search-query { color: #444 !important;}
+.pag-num { padding: 27px 0;}
+
+.pagintation { text-align: right;}
+
+/*------------------------------------*\
+    6. SINGLE CLIENT
+\*------------------------------------*/
+
+.single-list-clients {  margin: 0 !important; height: 325px; width: 1170px; overflow-y: scroll;}
+
+.single-list-clients li{ background-color: lighten(@gray, 10%);  max-height: 65px; height: 65px; color: #575757;  list-style: none !important; 
+  margin: 0 0 0 0 !important; vertical-align: top; }
+
+.single-list-clients li:hover { background: lighten(@gray, 12%);}
+
+
+.file-label { width: 100%; max-width: 575px; border-right: 1px solid #eee; color: lighten(@gray, 80%); 
+  border-bottom: 1px solid lighten(@gray, 20%) !important; border-right: 1px solid lighten(@gray, 20%) !important; 
+float: left; display: inline-block; border-bottom: 1px solid #eee; 
+   padding: 10px 20px; height: 43px; line-height: 43px;}
+
+.file-label-input { width: 100%; max-width: 499px; border-right: 1px solid #eee; color: lighten(@gray, 80%); 
+  border-bottom: 1px solid lighten(@gray, 20%) !important; border-right: none !important; 
+float: left; display: inline-block; border-bottom: 1px solid #eee; 
+   padding: 10px 20px; height: 43px; line-height: 43px;}
+
+.link-input { width: 490px; background-color: #333 !important; border: 1px solid #444; color: #fff; 
+  font-size: 12px !important; margin-bottom: 10px !important; margin-top: 5px !important;}
+
+/*------------------------------------*\
+    6. RELATED FILMS
+\*------------------------------------*/
+
+.related { color: #575757;}
+
+.related-films { background: none repeat scroll 0 0 #FFFFFF;
+    color: #575757;
+    height: 65px;
+    list-style: none outside none !important;
+    margin: 0 !important;
+    max-height: 65px;
+    vertical-align: top;
+    border-bottom: 1px solid #EEEEEE;
+  width: 100%;}
+
+.related-films a { 
+    display: inline-block;
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    padding: 10px 20px;}
+
+    .related-top { background-color: #eee !important; display: inline-block;
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    padding: 10px 20px;}
+
+/*------------------------------------*\
+    6. List changes
+\*------------------------------------*/
+    .list-changes { overflow-y: scroll; height: 430px;}
+    .make { height: 240px;}
+
+/*------------------------------------*\
+    6. LIST TASKS
+\*------------------------------------*/
+
+#tasks {
+  background:@greygreen;
+  padding: 20px 0;
+}
+
+
+.single-list-tasks {  margin: 0 !important; width: 1170px;}
+
+.single-list-tasks li{ background-color: lighten(@greygreen, 10%);  max-height: 64px; height: 64px; color: #f8f8f8;  list-style: none !important; 
+  margin: 0 0 0 0 !important; vertical-align: top; }
+
+.single-list-tasks li:hover { background: lighten(@greygreen, 8%);}
+
+.task-name { width: 100%; max-width: 1000px;}
+
+.task-name, .completed-task { float: left; display: inline-block; border-bottom: 1px solid lighten(@greygreen, 4%);; 
+   padding: 10px 20px; height: 43px; line-height: 43px; color: #121212;}
+
+.completed-task   { width: 100%; max-width: 90px; text-align: center;}
+.completed-task .btn-success { padding: 12px 20px;}
+.completed-task .btn-danger { padding: 12px 20px;}
+
+.progress-striped .bar { background-color: darken(@greygreen, 10%);}
+.progress { background-color: lighten(@greygreen, 10%);}
+
+.time-stamp-task { padding: 20px 0; text-align: right;}
+
+

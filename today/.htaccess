@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+Options -MultiViews
+
+RewriteEngine On
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^dashboard.circuitpro.co.uk$ 
+  RewriteRule (.*)$ http://dashboard.kingdom-creative.co.uk/$1 [R=301,L]
+</IfModule>
+
+RewriteRule ^add$ add.php [L]
+

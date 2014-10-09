@@ -1,0 +1,80 @@
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=us-ascii
+Message-Id: <7F69B406-F57D-48C3-A5CD-9995C3D5C298>
+Mime-Version: 1.0 (Mac OS X Mail 6.2 \(1499\))
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+		<style type="text/css">
+
+			/* Template Styles */
+
+			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+			
+			/**
+			* @tab Page
+			* @section background color
+			* @tip Set the background color for your email. You may want to choose one that matches your company's branding.
+			* @theme page
+			*/
+			body{
+				/*@editable*/ margin: 0; padding: 0;
+				font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+				margin: 20px;
+			}
+
+			a { color: #70e8cb; text-decoration: none;}
+			a:hover { color: #333;}
+		
+		</style>
+	</head>
+
+<body>
+
+<p>&nbsp;</p>
+<p>Best Regards,</p>
+
+</div>
+
+		<table width="600" cellspacing="0" cellpadding="0" style="margin-bottom:10px;">
+			<tr>
+				<td>
+<img src="http://www.circuitpro.co.uk/email/Email-Lewis.jpg" alt="Show for content Lewis Healey - Head of Design">
+				</td>
+			</tr>
+</table>
+
+	<table width="600" cellspacing="0" cellpadding="0" style="margin-bottom:5px;">
+			<tr>
+				<td>
+<a href="http://www.circuitpro.co.uk/recommendation"><img src="http://www.circuitpro.co.uk/email/staff-pick.jpg" alt="View the latest staff pick"></a>
+				</td>
+					<td>
+<a href="http://www.circuitpro.co.uk/about-circuit-pro/"><img src="http://www.circuitpro.co.uk/email/meet-the-team.jpg" alt="Learn about us and our team"></a>
+				</td>
+			</tr>
+</table>
+
+
+			<table width="600" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+						<table style="font-size: 12px;">
+							<tr>
+								<td width="500" style="color: #999;">
+									Unit 4, Devonshire Business Centre, Works Road,<br />Letchworth, SG6 1GJ
+
+								</td>
+
+								<td width="300" style="color: #70e8cb; text-align: right;">
+									t: 01462 678880  |  <a href="http://www.circuitpro.co.uk/" title="Visit Circuit Pro">www.circuitpro.co.uk</a>
+									
+								</td>
+							</tr>
+						</table>
+				</td>
+			</tr>
+		</table>
+		</body>
